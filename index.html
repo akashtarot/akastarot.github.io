@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111" />
+    <title>AKAS Tarot Notifications</title>
+    <link rel="manifest" href="manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function(OneSignal) {
+            await OneSignal.init({
+                appId: "1e5198fb-306e-4693-8fdd-6ad2f7364b0b",
+                notifyButton: {
+                    enable: true
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Καλώς ήρθες στο AKAS Tarot</h1>
+    <p>Αυτός ο ιστότοπος υποστηρίζει Web Push ειδοποιήσεις μέσω OneSignal.</p>
+</body>
+</html>
